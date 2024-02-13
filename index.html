@@ -1,0 +1,70 @@
+<html>
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <title>Jimmys Restaurant</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- main image and heading of the app -->
+      <div class="main-text">
+        <h1>Jimmy's Diner</h1>
+        <p>The best burgers and Pizza in town.</p>
+      </div>
+    </header>
+    <div id="enter-card" class="enter-card hidden">
+      <p class="card-details">Enter card details</p>
+      <!-- form to fill details for payment -->
+      <form id="flex-form" class="flex-form">
+        <input
+          placeholder="Enter your name"
+          name="full-name"
+          type="text"
+          required
+          class="complete-order"
+          id="full-name"
+        /><input
+          placeholder="Enter card number"
+          type="number"
+          required
+          class="complete-order"
+        /><input
+          placeholder="Enter CVV"
+          type="number"
+          required
+          class="complete-order"
+        />
+        <button id="pay-btn" type="submit" class="pay-btn">Pay</button>
+      </form>
+    </div>
+    <main id="render-menu"></main>
+    <section id="checkout" class="checkout">
+      <div class="hidden" id="hidden">
+        <div class="shopping-cart" id="shopping-cart">
+          <p class="order-font-size">Your Order</p>
+        </div>
+        <div id="render-cart-items">
+          <!-- render cart items here-->
+        </div>
+        <div class="divider"></div>
+        <div class="total-price-container">
+          <p class="order-font-size">Total Price:</p>
+          <span id="total-price"></span>
+        </div>
+        <button id="complete-btn" type="button" class="order">
+          Complete Order
+        </button>
+      </div>
+    </section>
+    <!-- final message text render here-->
+    <div id="thanks-message" class="thanks-message"></div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
